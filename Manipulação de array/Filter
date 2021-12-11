@@ -91,3 +91,27 @@ const imprimirJogo = (jogo) => {
 
 const jogosRecentes = jogos.filter(verificaJogoRecente);
 jogosRecentes.forEach(imprimirJogo);
+
+
+-------------------------------------------------------------------------------------------------------------------------
+   //retorne apenas os personagens da Microsoft:
+   //dadosPersonagens.js
+   let personagens = [
+    {nome: 'Master chief', proprietario: 'Microsoft'},
+    {nome: 'Kratos', proprietario: 'Sony'},
+    {nome: 'Marcus Fenix', proprietario: 'Microsoft'},
+    {nome: 'Link', proprietario: 'Nintendo'}
+];
+
+//filtra proprietario.js
+function verificaProprietario(personagem){
+    return (personagem.proprietario == "Microsoft")
+}
+
+
+//index.js
+
+let personagensMicrosoft = personagens.filter(verificaProprietario)
+personagensMicrosoft.forEach (personagem =>{
+    console.log(personagem.nome)
+})
