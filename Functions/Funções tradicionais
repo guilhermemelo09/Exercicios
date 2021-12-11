@@ -1,0 +1,38 @@
+//Complete o código abaixo para que uma lista de produtos receba um desconto de 10% no seu valor final se os meses forem novembro ou dezembro:
+let produtos = [
+    {nome: 'Xbox Series X', preco: '4599'},
+    {nome: 'Xbox Series S', preco: '2799'},
+    {nome: 'PS5', preco: '4699'},
+    {nome: 'PS5 All-Digital', preco: '4199'},
+];
+
+
+function aplicaDesconto(precoProduto){
+    let descontoPorcento = 10;
+    let valorDesconto = (descontoPorcento/100)* precoProduto;
+    let precoFinal = precoProduto - valorDesconto;
+
+    return precoFinal
+}
+//a função aplica desconto não é importada, é criada para ser usada dentro da função listaProdutos
+//O precoProduto vem da função listaProdutos, que extrai do array produtos
+
+
+function listaProdutos(produtos){
+    let data = new Date();
+    let mes = data.getMonth();
+    
+
+    produtos.forEach(produto=>{
+        let nomeProduto = produto.nome;
+        let precoProduto = produto.preco;
+
+        precoProduto = (mes==10 || mes==11)?aplicaDesconto(precoProduto):precoProduto;
+        //IF tenário, se cumpriu a condição, irá chamar a função aplicaDesconto e passar o precoProduto como parâmetro
+
+        console.log("Produto: "+nomeProduto+" - Preço: R$ "+precoProduto)
+    })
+}
+
+
+listaProdutos(produtos);
