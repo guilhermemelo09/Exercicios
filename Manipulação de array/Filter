@@ -115,3 +115,26 @@ let personagensMicrosoft = personagens.filter(verificaProprietario)
 personagensMicrosoft.forEach (personagem =>{
     console.log(personagem.nome)
 })
+
+
+--------------------------------------------------------------------------------------------------------------------------------------
+//Filtra apenas os mangas da Editora Panini
+
+let mangas = [
+    {titulo: 'Naruto', editora: 'Panini'},
+    {titulo: 'Edens Zero', editora: 'JBC'},
+    {titulo: 'Nisekoi', editora: 'Panini'},
+    {titulo: 'Hokuto no Ken', editora: 'JBC'}
+];
+
+
+function verificaEditora(manga)
+{
+   return (manga.editora == 'Panini');
+}
+
+let mangasPanini = mangas.filter(verificaEditora);
+
+mangasPanini.forEach(manga =>{
+    console.log(manga.titulo);
+})
