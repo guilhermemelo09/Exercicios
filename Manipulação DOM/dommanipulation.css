@@ -1,0 +1,24 @@
+.button-teste{
+    width:150px;
+    height:50px;
+  }
+
+.container1{
+    display:flex;
+    flex-direction: row;
+}
+.container2{
+    display:flex;
+    flex-direction: row;
+}
+.content1{
+    height:150px;
+    width:150px;
+}  
+.content3{
+    height:150px;
+    width:150px;
+    border:1px solid black;
+    margin:5px;
+    
+}
