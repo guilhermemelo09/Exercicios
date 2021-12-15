@@ -4,21 +4,27 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="dommanipulation.css" rel='stylesheet'>
-    <title>DOM Manipulation</title>
+    <title>JavaScript - DOM</title>
+    <link href="dommanipulation.css" rel="stylesheet" >
 </head>
 <body>
-    
+    <div class="content1">
+        <button value="Alterar título" onclick="mudarTitulo()" class="btn-mudarTitulo">Alterar Título</button>
+
+        <button value="Alterar cor fundo" onclick="mudarFundo()" class="btn-mudarTitulo">Alterar cor de fundo</button>
+
+        <button value="Alterar cor fundo" onclick="inserirImagenFundo()" class="btn-mudarTitulo">Inserir Imagem no fundo</button>
+    </div>
 
     <button onclick='testar()' class="button-teste">Testar</button>
     <p class="test1">Antes</p>
     <p class="test"></p>
 
     <figure>
-      <img src="./imagens/befora.jpeg" id='imageteste'>
+      <img src="./images/befora.jpeg" id='imageteste'>
     </figure>
-    <div class='container1'>
-        <div class="content1">Teste teste teste</div>
+    <div class='container'>
+        <div class="content4">Teste teste teste</div>
         <div class="content2">Mudar a fonte</div>
         <div class="content3">Esconder esse elemento.</div>
         <input type="text" id="myText" value="Hello">
@@ -28,7 +34,16 @@
         <p id='demo'></p>
     </div>
 
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <form name="MyForm" action="/action_page.php" class='formulario'>
+        Name:<input type="text" id='nomeform'><br>
+        Idade:<input type="number" id='idadeform'><br>
+        Nome da Mãe: <input type="text" id='nmaeform'>
+
+        <button type="button" onclick="validateForm()" id='btn-form' >
+            Enviar dados
+        </button>    
+    </form>
+
     <script src="dommanipulation.js"></script>
 </body>
 </html>
