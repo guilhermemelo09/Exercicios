@@ -1,0 +1,7 @@
+const inverteNomeSobrenome = (NomeSobrenome) =>{
+    const nome = NomeSobrenome.split(" ");
+
+    return nome[1] + ' '+ nome[0];
+}
+
+console.log(inverteNomeSobrenome("Guilherme Melo"))
