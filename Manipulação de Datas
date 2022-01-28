@@ -20,3 +20,22 @@ const data = new Date();
 const dataBrasil = formataData(data)
 console.log(dataBrasil);
 ----------------------------------------------------------------
+//Calculando o tempo Decorrido
+
+//Exemplo 1
+var inicio = Date.now(); // Método que retorna o valor numérico correspondente ao tempo corrente - o número de milisegundos passados desde 1 de Janeiro de 1970 00:00:00 UTC.
+console.log(inicio) 
+
+//O evento para o tempo vai aqui
+//facaAlgoPorUmLongoTempo();
+var fim = Date.now()
+var decorrido = fim-inicio
+console.log(decorrido)
+//---------------------------------------------
+//Exemplo 2
+var inicio2 = new Date()
+//O evento para o tempo vai aqui
+//facaAlgoPorUmLongoTempo();
+var fim2 = new Date()
+var decorrido2 = fim2.getTime()-inicio2.getTime()
+console.log(decorrido2)
