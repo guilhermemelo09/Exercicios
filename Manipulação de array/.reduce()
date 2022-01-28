@@ -126,3 +126,27 @@ console.log(sumResult)
 
 //O 0 é inserido como valor do primeiro argumento da função no início dessa função. Esse argumento 0 só serve para ser esse primeiro valor do accumalator
 //o argumento accumalator serve justamente para receber o retorno em cada iteração. Na primeira iteração ele recebe x e carrega esse x para as demais iterações.
+
+------------------------------------------------------
+const phaseScores = [
+  { name: 'Vinicius Costa', score: 337 },
+  { name: 'Roger Melo', score: 43 },
+  { name: 'Alfredo Braga', score: 234 },
+  { name: 'Pedro H. Silva', score: 261 },
+  { name: 'Ana Paula Rocha', score: 491 },
+  { name: 'Vinicius Costa', score: 167 },
+  { name: 'Roger Melo', score: 137 },
+  { name: 'Alfredo Braga', score: 135 },
+  { name: 'Ana Paula Rocha', score: 359 },
+  { name: 'Pedro H. Silva', score: 133 }
+]
+
+const sumScorePlayer = phaseScores.reduce((accumulator, phaseScore)=>{
+  if (phaseScore.name==='Roger Melo'){
+    accumulator += phaseScore.score
+  }
+
+  return accumulator
+},0)
+
+console.log(sumScorePlayer)
