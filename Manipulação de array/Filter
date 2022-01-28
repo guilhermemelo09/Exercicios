@@ -138,3 +138,14 @@ let mangasPanini = mangas.filter(verificaEditora);
 mangasPanini.forEach(manga =>{
     console.log(manga.titulo);
 })
+-----------------------------------------
+const users = [
+  { name: 'Ada Lovelace', premium: true },
+  { name: 'Grace Hopper', premium: false },
+  { name: 'Alan Turing', premium: true },
+  { name: 'Linus Torvalds', premium: false },
+  { name: 'Margaret Hamilton', premium: true }
+]
+
+const premiumUser = users.filter(user => user.premium)//retorna somente aqueles que o user.premium sejam true
+console.log(premiumUser)
