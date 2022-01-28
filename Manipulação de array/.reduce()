@@ -112,3 +112,17 @@ const totalVolume = itensCarrinho.reduce((total, itemCarrinho)=>{ //método redu
 },0);//porquem desse zero ???!!
 
 console.log(totalVolume);
+
+------------------------------------------------------------
+//Ao contrário dos métodos map e filter, o reduce pode gerar um output que não seja um array.
+
+//Exemplo 1: Tenho um array de números e quero a soma desses números (estou transformando/reduzindo o meu array em um number)
+const numbers = [1,2,3,10];
+
+const sumResult = numbers.reduce((accumalator, item) =>{
+  return accumalator + item
+},0)
+console.log(sumResult)
+
+//O 0 é inserido como valor do primeiro argumento da função no início dessa função. Esse argumento 0 só serve para ser esse primeiro valor do accumalator
+//o argumento accumalator serve justamente para receber o retorno em cada iteração. Na primeira iteração ele recebe x e carrega esse x para as demais iterações.
