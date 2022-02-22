@@ -149,3 +149,20 @@ const users = [
 
 const premiumUser = users.filter(user => user.premium)//retorna somente aqueles que o user.premium sejam true
 console.log(premiumUser)
+
+---------------------------------------------------------------------------------------------------------------------------------
+const numeros = [5,50,10,1,2,5,8,4,40,500,411,159,1,4,5,1560];
+function verificaNumerosPares(valor, indice, array){//utilizando a filter,os parâmetros são passados automaticamente.
+    console.log(valor);
+    console.log(indice);
+    console.log(array);
+
+    if((valor%2)===0){
+        return true //Ao retornar true, eu jogo para o meu novo array.
+    }else{
+        return false//ao retornar false, não jogo o valor para o novo array.
+    }
+}
+
+const numerosPares = numeros.filter(verificaNumerosPares)
+console.log(numerosPares) //Out = 50,10,2,8,4,40,500,4,1560
